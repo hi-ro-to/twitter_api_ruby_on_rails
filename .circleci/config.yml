@@ -12,6 +12,7 @@ jobs:
         echo $CIRCLE_USERNAME
         echo $CIRCLE_PROJECT_USERNAME
         echo $CIRCLE_PROJECT_REPONAME
+        echo $CIRCLE_NODE_TOTAL
         if [$CIRCLE_PREVIOUS_BUILD_NUM == $CIRCLE_BUILD_NUM]; then
           exit 1
         fi
