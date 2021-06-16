@@ -9,6 +9,9 @@ jobs:
         echo first step
         echo $CIRCLE_PREVIOUS_BUILD_NUM
         echo $CIRCLE_BUILD_NUM
+        echo $CIRCLE_USERNAME
+        echo $CIRCLE_PROJECT_USERNAME
+        echo $CIRCLE_PROJECT_REPONAME
         if [$CIRCLE_PREVIOUS_BUILD_NUM == $CIRCLE_BUILD_NUM]; then
           exit 1
         fi
