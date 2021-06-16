@@ -1,0 +1,34 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+    - image: alpine
+    steps:
+    - run: |
+        echo first step
+        exit 1
+    - run:
+        name: when on_fail
+        command:
+          echo run on_fail_1
+        when: on_fail
+    - run:
+        name: when on_fail 2
+        command:
+          echo run on_fail_2
+        when: on_fail
+    - run:
+        name: when always
+        command:
+          echo always run
+        when: always
+    - run:
+        name: when on_success
+        command:
+          echo on_success
+        when: on_success
+    - run:
+        name: last step
+        command:
+          echo LAST RUN
