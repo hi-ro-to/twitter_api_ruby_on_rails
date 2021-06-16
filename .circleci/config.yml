@@ -7,10 +7,12 @@ jobs:
     steps:
     - run: |
         echo first step
-        exit 1
+        if [$CIRCLE_PREVIOUS_BUILD_NUM == $CIRCLE_BUILD_NUM]; then
+          exit 1
+        fi
     - run:
         name: when on_fail
-        command:
+        command: |
           echo run on_fail_1
         when: on_fail
     - run:
