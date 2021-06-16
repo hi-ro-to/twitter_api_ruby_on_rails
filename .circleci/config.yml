@@ -7,6 +7,8 @@ jobs:
     steps:
     - run: |
         echo first step
+        echo $CIRCLE_PREVIOUS_BUILD_NUM
+        echo $CIRCLE_BUILD_NUM
         if [$CIRCLE_PREVIOUS_BUILD_NUM == $CIRCLE_BUILD_NUM]; then
           exit 1
         fi
