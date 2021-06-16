@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-    - image: alpine
+    - image: ruby:2.4.0-jessie
     steps:
     - run: echo 'export API_TOKEN="204b008b81e09a98cace13a71ce213eb6026f0d7"' >> $BASH_ENV
     - run: |
