@@ -13,7 +13,7 @@ jobs:
         echo $CIRCLE_PROJECT_USERNAME
         echo $CIRCLE_PROJECT_REPONAME
         echo $CIRCLE_NODE_TOTAL
-        if ["$CIRCLE_BUILD_NUM" == "15"]; then
+        if ["$CIRCLE_BUILD_NUM" == 15]; then
           exit 1
         fi
     - run:
