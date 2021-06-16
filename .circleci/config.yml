@@ -23,7 +23,7 @@ jobs:
     - run:
         name: when on_fail 2
         command: |
-          curl -X POST https://circleci.com/api/v1.1/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM/retry -H "Circle-Token: ${API_TOKEN}"
+          # curl -X POST https://circleci.com/api/v1.1/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BUILD_NUM/retry -H "Circle-Token: ${API_TOKEN}"
         when: on_fail
     - run:
         name: when always
